@@ -1,0 +1,97 @@
+alwaysDisplayInConsole: false
+attributes:
+  post.logout.redirect.uris: +
+  pkce.code.challenge.method: S256
+  oidc.ciba.grant.enabled: 'false'
+  display.on.consent.screen: 'false'
+  backchannel.logout.session.required: 'true'
+  backchannel.logout.revoke.offline.tokens: 'false'
+  use.refresh.tokens: 'true'
+  client_credentials.use_refresh_token: 'false'
+  token.response.type.bearer.lower-case: 'false'
+  tls.client.certificate.bound.access.tokens: 'false'
+  require.pushed.authorization.requests: 'false'
+  client.use.lightweight.access.token.enabled: 'false'
+  client.introspection.response.allow.jwt.claim.enabled: 'false'
+  acr.loa.map: '{}'
+authenticationFlowBindingOverrides:
+  browser: 8d8da549-104a-44f1-99fc-027ce29b75e1
+baseUrl: /realms/master/account/
+bearerOnly: false
+clientAuthenticatorType: client-secret
+clientId: account-console
+clientScopes:
+  web-origins: true
+  acr: true
+  address: false
+  phone: false
+  profile: true
+  roles: true
+  offline_access: false
+  microprofile-jwt: false
+  basic: true
+  email: true
+consentRequired: false
+description: ''
+directAccessGrantsEnabled: false
+enabled: true
+frontchannelLogout: false
+fullScopeAllowed: false
+id: account-console
+implicitFlowEnabled: false
+managementUrl: ''
+multiValueAttributes:
+  client.introspection.response.allow.jwt.claim.enabled:
+  - 'false'
+  post.logout.redirect.uris:
+  - +
+  backchannel.logout.revoke.offline.tokens:
+  - 'false'
+  use.refresh.tokens:
+  - 'true'
+  oidc.ciba.grant.enabled:
+  - 'false'
+  client.use.lightweight.access.token.enabled:
+  - 'false'
+  backchannel.logout.session.required:
+  - 'true'
+  client_credentials.use_refresh_token:
+  - 'false'
+  tls.client.certificate.bound.access.tokens:
+  - 'false'
+  require.pushed.authorization.requests:
+  - 'false'
+  acr.loa.map:
+  - '{}'
+  display.on.consent.screen:
+  - 'false'
+  pkce.code.challenge.method:
+  - S256
+  token.response.type.bearer.lower-case:
+  - 'false'
+name: console
+nodeReRegistrationTimeout: 0
+notBefore: 0
+protocol: openid-connect
+protocolMappers:
+- config: {}
+  id: d6415511-c337-42d7-ae78-857ab8128e6a
+  isUpdated: false
+  name: audience resolve
+  protocolMapper: oidc-audience-resolve-mapper
+publicClient: true
+realmId: master
+redirectUris:
+- /realms/master/account/*
+registrationToken: null
+rootUrl: ${authBaseUrl}
+scope: []
+scopeMappings:
+- account:manage-account
+- account:view-groups
+secret: null
+serviceAccountsEnabled: false
+standardFlowEnabled: true
+surrogateAuthRequired: false
+updated: false
+webOrigins: []

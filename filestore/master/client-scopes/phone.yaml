@@ -1,0 +1,35 @@
+attributes:
+  consent.screen.text: ${phoneScopeConsentText}
+  include.in.token.scope: 'true'
+  display.on.consent.screen: 'true'
+description: 'OpenID Connect built-in scope: phone'
+id: phone
+name: phone
+protocol: openid-connect
+protocolMappers:
+- config:
+    introspection.token.claim: 'true'
+    userinfo.token.claim: 'true'
+    user.attribute: phoneNumber
+    id.token.claim: 'true'
+    access.token.claim: 'true'
+    claim.name: phone_number
+    jsonType.label: String
+  id: c39a6b30-44e1-4d63-a88f-76d5e61b4569
+  isUpdated: false
+  name: phone number
+  protocolMapper: oidc-usermodel-attribute-mapper
+- config:
+    introspection.token.claim: 'true'
+    userinfo.token.claim: 'true'
+    user.attribute: phoneNumberVerified
+    id.token.claim: 'true'
+    access.token.claim: 'true'
+    claim.name: phone_number_verified
+    jsonType.label: boolean
+  id: 85c30ba0-d371-468d-837b-c0d87a6e3e89
+  isUpdated: false
+  name: phone number verified
+  protocolMapper: oidc-usermodel-attribute-mapper
+realmId: master
+scopeMappings: []
